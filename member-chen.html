@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈可欣的个人主页</title>
+    <style>
+        body { 
+            font-family: '微软雅黑', sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        
+        .back-link { 
+            color: #3498db; 
+            text-decoration: none; 
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        .info-card {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex; 
+            align-items: center; 
+        }
+        
+        .avatar {
+            width: 139px;
+            height: 200px;
+            border-radius: 5%;
+            object-fit: cover;
+            margin-right: 25px;
+            border: 3px solid #3498db; 
+        }
+        
+        .note-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #3498db;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 576px) {
+            .info-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回小组主页链接 -->
+    <p><a class="back-link" href="index.html">← 返回小组主页</a></p>
+
+    <!-- 个人信息卡片 -->
+    <div class="info-card">
+        <img src="陈可欣.jpg" alt="陈可欣个人照" class="avatar" title="陈可欣">
+        <div>
+            <h1>陈可欣</h1>
+            <p><strong>学号</strong>：2022302051119<br>
+               <strong>专业</strong>：地理信息科学（数字地图与空间信息工程）<br>
+               <strong>邮箱</strong>：2022302051119@whu.edu.cn<br>
+               <strong>出生年月</strong>：2005年1月<br>
+               <strong>座右铭</strong>：经纬为尺，丈量天地之变；数据作舟，探寻空间之秘。</p>
+        </div>
+    </div>
+
+    <!-- 学习笔记 -->
+    <div class="note-section">
+        <h2>HTML学习笔记</h2>
+
+        <h3>2025.4.30 - 搭建静态网站 部署Tomcat</h3>
+        <p>静态网站由 HTML、CSS 等固定文件构成，可用 VSCode 搭建。先创建项目文件夹，编写小组及成员主页代码，
+            利用 Live Server 插件预览，还能通过部署到 GitHub Pages 等让他人访问。</p>
+        <p>安装 Tomcat 可部署网页。安装后启动，将网页文件放至 webapps 目录。若端口被占，
+            可用命令行或任务管理器查看并终止进程，还可修改 Tomcat 默认端口避免冲突。</p>
+
+        <h3>2025.5.3 - 基础标签学习</h3>
+        <p>今天重点学习了图片标签和链接标签的使用：</p>
+        <pre>
+            <!-- 图片标签（带响应式属性） -->
+            &lt;img src="chen-avatar.jpg" 
+                 alt="个人照" 
+                 class="avatar" 
+                 title="陈可欣"&gt;
+
+            <!-- 绝对路径与相对路径的区别 -->
+            &lt;a href="index.html"&gt;返回小组主页&lt;/a&gt;  // 相对路径
+            &lt;a href="https://www.w3school.com.cn"&gt;W3C教程&lt;/a&gt;  // 绝对路径
+        </pre>
+  
+        <h3>2025.5.4 - CSS样式入门</h3>
+        <p>学习了CSS三种导入方式：</p>
+        <pre>
+            &lt;style&gt;
+            p { color: blue; }
+            &lt;/style&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+            &lt;p style="font-size: 16px"&gt;内联样式&lt;/p&gt;
+        </pre>
+
+        <h3>2025.5.7 - CSS布局实践</h3>
+        <p>尝试用flex布局实现小组主页的左右分栏，解决了图片与文字垂直对齐的问题：</p>
+        <pre>
+            .header {
+                display: flex;
+                align-items: center;  /* 垂直居中对齐 */
+                justify-content: space-between;  /* 内容两端分布 */
+            }
+        </pre>
+    </div>
+</body>
+</html>

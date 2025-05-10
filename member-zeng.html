@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾妤晨的个人主页</title>
+    <style>
+        body { 
+            font-family: '微软雅黑', sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        
+        .back-link { 
+            color: #3498db; 
+            text-decoration: none; 
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        .info-card {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex; 
+            align-items: center; 
+        }
+        
+        .avatar {
+            width: 139px;
+            height: 200px;
+            border-radius: 5%;
+            object-fit: cover;
+            margin-right: 25px;
+            border: 3px solid #3498db; 
+        }
+        
+        .note-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #3498db;
+        }
+        
+        @media (max-width: 576px) {
+            .info-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回小组主页链接 -->
+    <p><a class="back-link" href="index.html">← 返回小组主页</a></p>
+
+    <!-- 个人信息卡片 -->
+    <div class="info-card">
+        <img src="曾妤晨.jpg" alt="曾妤晨个人照" class="avatar" title="曾妤晨">
+        <div>
+            <h1>曾妤晨</h1>
+            <p><strong>学号</strong>：2022302051116<br>
+               <strong>专业</strong>：地理信息科学（数字地图与空间信息工程）<br>
+               <strong>邮箱</strong>：2022302051116@whu.edu.cn<br>
+               <strong>出生年月</strong>：2004年2月<br>
+               <strong>座右铭</strong>：以精准为尺，量度山河表里；以热忱为墨，绘制时代蓝图。</p>
+        </div>
+    </div>
+
+    <!-- 学习笔记（严格保持原始样式结构） -->
+    <div class="note-section">
+        <h2>HTML学习笔记</h2>
+
+        <h3>2025.4.30 HTML文档基本结构</h3>
+        <p>学习了根元素与基础标签：<br>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang="zh-CN"&gt; &lt;!-- lang属性指定页面语言，方便搜索引擎和辅助工具识别 --&gt;<br>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt; &lt;!-- 设置字符编码，常见UTF-8可支持多语言字符 --&gt;<br>
+        &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; &lt;!-- 移动端适配，确保页面在不同设备正确显示 --&gt;<br>
+        &nbsp;&nbsp;&lt;title&gt;静态网页标题&lt;/title&gt; &lt;!-- 页面标题，显示在浏览器标签页 --&gt;<br>
+        &lt;/head&gt;</p>
+
+        <h3>2025.5.1 核心标签与应用</h3>
+        <p>1.文本与段落标签<br>
+        （1）标题标签：&lt;h1&gt;-&lt;h6&gt;用于定义不同层级标题，搜索引擎会根据标题层级抓取内容重点；<br>
+        （2）段落标签：&lt;p&gt;包裹文本形成段落，&lt;br&gt;用于强制换行，&lt;hr&gt;插入水平分隔线。</p>
+        <p>2.多媒体元素<br>
+        （1）图像标签：&lt;img src="image.jpg" alt="描述文字" width="300" height="200"&gt;，src指定图片路径，alt用于图片加载失败时显示替代文字，width和height设置图像尺寸；<br>
+        （2）音频 / 视频：HTML5 支持原生多媒体播放。</p>
+        <p>3.链接与导航<br>
+        （1）超链接：&lt;a href="https://www.example.com" target="_blank"&gt;访问示例网站&lt;/a&gt;，target属性可设置链接打开方式，_blank为新窗口打开；<br>
+        （2）导航栏：结合&lt;nav&gt;标签与列表标签构建。</p>
+
+        <h3>2025.5.4 属性与样式基础</h3>
+        <p>1.常用属性<br>
+        class与id：class用于批量选择元素应用样式（如.btn { color: white; }），id为元素唯一标识（如#logo { width: 100px; }）；<br>
+        style内联样式：直接在标签内定义样式，如&lt;p style="color: red; font-size: 16px;"&gt;红色文本&lt;/p&gt;。</p>
+        <p>2.基础样式设置<br>
+        通过&lt;style&gt;标签在&lt;head&gt;内添加 CSS 样式，或链接外部样式表（&lt;link rel="stylesheet" href="styles.css"&gt;）。</p>
+        <pre>
+            .header {
+                display: flex;
+                align-items: center;  /* 垂直居中对齐 */
+                justify-content: space-between;  /* 内容两端分布 */
+            }
+        </pre>
+    </div>
+</body>
+</html>
+    

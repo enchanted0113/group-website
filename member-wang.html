@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王思远的个人主页</title>
+    <style>
+        body { 
+            font-family: '微软雅黑', sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        
+        .back-link { 
+            color: #3498db; 
+            text-decoration: none; 
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        .info-card {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex; 
+            align-items: center; 
+        }
+        
+        .avatar {
+            width: 139px;
+            height: 200px;
+            border-radius: 5%;
+            object-fit: cover;
+            margin-right: 25px;
+            border: 3px solid #3498db; 
+        }
+        
+        .note-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #3498db;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 576px) {
+            .info-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回小组主页链接 -->
+    <p><a class="back-link" href="index.html">← 返回小组主页</a></p>
+
+    <!-- 个人信息卡片 -->
+    <div class="info-card">
+        <img src="王思远.jpg" alt="王思远个人照" class="avatar" title="王思远">
+        <div>
+            <h1>王思远</h1>
+            <p><strong>学号</strong>：2022302051120<br>
+               <strong>专业</strong>：地理信息科学（数字地图与空间信息工程）<br>
+               <strong>邮箱</strong>：2022302051120@whu.edu.cn<br>
+               <strong>出生年月</strong>：2004年12月<br>
+               <strong>座右铭</strong>：用代码丈量世界，以数据描绘未来。</p>
+        </div>
+    </div>
+
+    <!-- 学习笔记 -->
+    <div class="note-section">
+        <h2>HTML学习笔记</h2>
+        
+        <h3>2025.5.2 - 文本标签基础</h3>
+        <p>掌握了HTML常见文本标签的用法：</p>
+        <pre>
+&lt;h1&gt;标题标签&lt;/h1&gt;
+&lt;p&gt;段落标签&lt;/p&gt;
+&lt;b&gt;加粗文本&lt;/b&gt;
+&lt;ul&gt;
+  &lt;li&gt;无序列表项&lt;/li&gt;
+&lt;/ul&gt;
+        </pre>
+        
+        <h3>2025.5.3 - HTML属性应用</h3>
+        <p>学习了链接、图片等元素的常用属性：</p>
+        <pre>
+&lt;a href="https://whu.edu.cn" target="_blank"&gt;武汉大学&lt;/a&gt;
+&lt;img src="example.jpg" alt="示例图片" width="300"&gt;
+        </pre>
+        
+        <h3>2025.5.4 - 区块与布局</h3>
+        <p>使用div和span进行页面布局：</p>
+        <pre>
+&lt;div class="container"&gt;
+  &lt;span&gt;内联元素&lt;/span&gt;
+  &lt;p&gt;区块内容&lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+        
+        <h3>2025.5.5 - 表单设计</h3>
+        <p>创建基本的用户输入表单：</p>
+        <pre>
+&lt;form action="#"&gt;
+  &lt;input type="text" placeholder="用户名"&gt;
+  &lt;input type="password"&gt;
+  &lt;button type="submit"&gt;提交&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+
+      
+        <h3>2025.5.7 - 盒子模型</h3>
+        <p>理解CSS盒模型的组成：</p>
+        <pre>
+.demo {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+        </pre>
+        
+        <h3>2025.5.8 - JavaScript基础</h3>
+        <p>掌握JavaScript的导入方法：</p>
+        <pre>
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  console.log('内联脚本');
+&lt;/script&gt;
+        </pre>
+        
+        <h3>2025.5.9 - DOM操作</h3>
+        <p>通过JavaScript操作HTML元素：</p>
+        <pre>
+const element = document.getElementById('box');
+element.innerHTML = '修改内容';
+element.style.color = 'red';
+        </pre>
+    </div>
+</body>
+</html>

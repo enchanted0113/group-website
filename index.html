@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络GIS与位置服务小组</title>
+    <style>
+        body { 
+            font-family: '微软雅黑', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        .blue-banner {
+            background-color: #3498db; /* 蓝色背景 */
+            color: white; /* 白色文字 */
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .group-info {
+            max-width: 600px;
+        }
+        
+        .group-logo {
+            max-width: 400px;
+            border-radius: 8px;
+            border: 3px solid white; /* 白色边框 */
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .member-list { list-style: none; padding: 0; }
+        .member-list li { margin: 15px 0; }
+        .member-link { 
+            color: #2c3e50; 
+            text-decoration: none; 
+            padding: 5px 10px; 
+            border-bottom: 2px solid #3498db; 
+            font-size: 1.1em;
+            transition: all 0.3s ease; /* 平滑过渡效果 */
+        }
+        .member-link:hover { 
+            color: #3498db; 
+            background-color: #f0f8ff; 
+            border-radius: 4px;
+        }
+        
+        .demo-section { 
+            margin: 30px 0; 
+            padding: 20px; 
+            background: #f8f9fa; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 添加阴影效果 */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th { background-color: #3498db; color: white; }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .group-logo {
+                margin-top: 20px;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 蓝色背景横条 -->
+    <div class="blue-banner">
+        <div class="container">
+            <div class="group-info">
+                <h1>网络GIS与位置服务小组</h1>
+                <p>我们是2022级网络GIS课程实习小组，专注于学习HTML静态网站开发。</p>
+            </div>
+            <img src="封面图.jpg" alt="小组合影" class="group-logo" title="网络GIS课程实习小组">
+        </div>
+    </div>
+
+    <!-- 页面内容 -->
+    <div class="content">
+        <!-- 成员列表 -->
+        <h2>小组成员</h2>
+        <ul class="member-list">
+            <li><a class="member-link" href="member-chen.html">陈可欣的个人主页</a></li>
+            <li><a class="member-link" href="member-zhao.html">赵语涵的个人主页</a></li>
+            <li><a class="member-link" href="member-zeng.html">曾妤晨的个人主页</a></li>
+            <li><a class="member-link" href="member-wang.html">王思远的个人主页</a></li>
+        </ul>
+
+        <!-- 成员分工表格 -->
+        <div class="demo-section">
+            <h3>成员分工表</h3>
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <th>分工内容</th>
+                    <th>负责模块</th>
+                </tr>
+                <tr>
+                    <td>陈可欣</td>
+                    <td>前端布局与样式设计</td>
+                    <td>主页结构搭建、CSS样式优化</td>
+                </tr>
+                <tr>
+                    <td>赵语涵</td>
+                    <td>静态资源管理</td>
+                    <td>图片/文档整理、链接校验</td>
+                </tr>
+                <tr>
+                    <td>曾妤晨</td>
+                    <td>内容编辑与填充</td>
+                    <td>成员简介、学习笔记撰写</td>
+                </tr>
+                <tr>
+                    <td>王思远</td>
+                    <td>测试与优化</td>
+                    <td>多设备兼容性测试、代码调试</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 课程收获 -->
+        <div class="demo-section">
+            <h3>课程收获</h3>
+            <ul>
+                <li>掌握HTML基础标签（链接/图片/表格/列表）的灵活使用</li>
+                <li>学会通过CSS实现页面布局（flex布局、响应式设计）</li>
+                <li>理解静态网站开发的完整流程（设计-编码-测试-部署）</li>
+                <li>提升团队协作能力（分工明确、版本控制、问题同步）</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

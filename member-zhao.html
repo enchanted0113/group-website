@@ -1,0 +1,152 @@
+<DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赵语涵的个人主页</title>
+    <style>
+        body {
+            font-family: '微软雅黑', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+       .back-link {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+       .back-link:hover {
+            transform: translateX(-5px);
+        }
+       .info-card {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+       .avatar {
+            width: 139px;
+            height: 200px;
+            border-radius: 5%;
+            object-fit: cover;
+            margin-right: 25px;
+            border: 3px solid #3498db;
+        }
+       .note-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #3498db;
+        }
+        /* 响应式设计 */
+        @media (max-width: 576px) {
+           .info-card {
+                flex-direction: column;
+                text-align: center;
+            }
+           .avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p><a class="back-link" href="index.html">← 返回小组主页</a></p>
+    <div class="info-card">
+        <img src="赵语涵.jpg" alt="赵语涵个人照" class="avatar" title="赵语涵">
+        <div>
+            <h1>赵语涵</h1>
+            <p><strong>学号</strong>：2022302051090<br>
+                <strong>专业</strong>：地理信息科学<br>
+                <strong>邮箱</strong>：3181038116@qq.com<br>
+                <strong>出生年月</strong>：2004年8月<br>
+                <strong>座右铭</strong>：代码敲开地理奥秘之门，地图展现信息科学之美。</p>
+        </div>
+    </div>
+    <div class="note-section">
+        <h2>HTML学习笔记</h2>
+        
+        <h3>2025.4.30 - HTML整体认知</h3>
+        <p>HTML（超文本标记语言）用于构建网页结构，它能定义内容的语义（如标题、段落）、嵌入资源（图片/链接/视频），并为浏览器和搜索引擎提供页面信息。以下是最基础的HTML5文档结构示例：</p>
+        <pre><code>&lt;DOCTYPE html&gt;  &lt;-- 声明文档类型为HTML5 --&gt;
+&lt;html lang="zh-CN"&gt;  &lt;-- 根标签，lang指定语言 --&gt;
+&lt;head&gt;  &lt;-- 头部信息，不直接显示在页面 --&gt;
+    &lt;meta charset="UTF-8"&gt;  &lt;-- 设置字符编码 --&gt;
+    &lt;title&gt;我的第一个网页&lt;/title&gt;  &lt;-- 页面标题 --&gt;
+&lt;/head&gt;
+&lt;body&gt;  &lt;-- 页面主体内容 --&gt;
+    &lt;h1&gt;欢迎来到我的网页&lt;/h1&gt;  &lt;-- 一级标题 --&gt;
+    &lt;p&gt;这是一个段落&lt;/p&gt;  &lt;-- 段落内容 --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p>这个示例包含了HTML5的最小必要结构，浏览器会根据这些标签解析并渲染页面。</p>
+
+        <h3>2025.5.2 - HTML标记和属性基础</h3>
+        <p>HTML标记（标签）通常成对出现（如&lt;p&gt;...&lt;/p&gt;），部分为单标签（如&lt;img/&gt;）。属性用于补充标签的额外信息，格式为"属性名=属性值"（值需用引号包裹）。以下是常见标签的示例：</p>
+        
+        <h4>1. 文本类标签</h4>
+        <pre><code>&lt;h2&gt;二级标题&lt;/h2&gt;  &lt;-- 标题标签（h1-h6，字号递减） --&gt;
+&lt;p&gt;这是一个普通段落，&lt;b&gt;加粗文字&lt;/b&gt;，&lt;em&gt;强调文字&lt;/em&gt;&lt;/p&gt;
+&lt;-- 输出：这是一个普通段落，加粗文字，强调文字 --&gt;</code></pre>
+
+        <h4>2. 列表标签</h4>
+        <pre><code>&lt;h3&gt;无序列表（项目符号）&lt;/h3&gt;
+&lt;ul&gt;  &lt;-- 无序列表（unordered list） --&gt;
+    &lt;li&gt;地理信息科学&lt;/li&gt;  &lt;-- 列表项（list item） --&gt;
+    &lt;li&gt;Python编程&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;有序列表（数字序号）&lt;/h3&gt;
+&lt;ol&gt;  &lt;-- 有序列表（ordered list） --&gt;
+    &lt;li&gt;安装VS Code&lt;/li&gt;
+    &lt;li&gt;编写HTML代码&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h4>3. 链接与图片</h4>
+        <pre><code>&lt;-- 链接标签（a）：href指定目标地址，target="_blank"表示新窗口打开 --&gt;
+&lt;a href="https://www.douban.com" target="_blank"&gt;访问豆瓣&lt;/a&gt;
+
+&lt;-- 图片标签（img）：src指定图片路径，alt为图片描述（加载失败时显示） --&gt;
+&lt;img src="zhaoyuhan.jpg" alt="赵语涵个人照" width="150"&gt;</code></pre>
+
+        <h3>2025.5.3 - HEAD元素学习</h3>
+        <p>HEAD标签内的内容不直接显示在页面，但对页面功能和优化至关重要。以下是常用元素的代码示例：</p>
+
+        <h4>1. meta标签：定义元信息</h4>
+        <pre><code>&lt;-- 字符编码（必须！否则可能乱码） --&gt;
+&lt;meta charset="UTF-8"&gt;
+
+&lt;-- 视口设置（移动端适配关键） --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;-- 页面描述（供搜索引擎抓取，提升SEO） --&gt;
+&lt;meta name="description" content="赵语涵的个人主页，包含地理信息科学学习笔记"&gt;
+
+&lt;-- 关键词（已逐渐被搜索引擎弱化，但仍可补充） --&gt;
+&lt;meta name="keywords" content="地理信息科学,HTML学习,个人主页"&gt;</code></pre>
+
+        <h4>2. link标签：引入外部资源</h4>
+        <pre><code>&lt;-- 引入外部CSS样式表（让页面更美观） --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+&lt;-- 引入网站图标（浏览器标签栏显示的小图标） --&gt;
+&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+
+        <h4>3. script标签：嵌入JavaScript</h4>
+        <pre><code>&lt;-- 直接嵌入JS代码（通常放head或body末尾） --&gt;
+&lt;script&gt;
+    alert("欢迎访问我的主页！");  &lt;-- 弹出提示框 --&gt;
+&lt;/script&gt;
+
+&lt;-- 引入外部JS文件（例如交互逻辑） --&gt;
+&lt;script src="main.js"&gt;&lt;/script&gt;</code></pre>
+    </div>
+</body>
+</html>
